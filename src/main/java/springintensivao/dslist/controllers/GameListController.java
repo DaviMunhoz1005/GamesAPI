@@ -38,7 +38,7 @@ public class GameListController {
 		return result;		
 	}
 	
-	@PatchMapping(value = "/{listId}/games/replacement")
+	@PatchMapping(value = "/{listId}/games")
 	public void move(@PathVariable Long listId, @RequestBody ReplacementDTO body) {
 		gameListService.move(listId, body.getSourceIndex(), body.getDestinationIndex());
 	}
